@@ -16,6 +16,6 @@ jobs:
       - name: Instalando Dependências
         run: yarn
 
-      - name: Instalando Cypress
+      - name: Execução de Testes E2E com Cypress
         run: yarn cypress run
 
