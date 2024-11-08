@@ -19,3 +19,9 @@ jobs:
       - name: Execução de Testes E2E com Cypress
         run: yarn cypress run
 
+      - uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
+        with:
+          name: relatorio-de-testes
+          path: cypress/reports/html/.jsons/*.json
+
